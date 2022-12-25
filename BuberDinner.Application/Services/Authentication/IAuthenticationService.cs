@@ -1,4 +1,4 @@
-namespace BuberDinner.Application.Authentication;
+namespace BuberDinner.Application.Services.Authentication;
 
 public interface IAuthenticationService
 {
