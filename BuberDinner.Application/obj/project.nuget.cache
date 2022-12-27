@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "NW4DUYt7pEwM0WoETZo+iV8RSNh3wRf4n7If/x0wXr2R8M8kcI/yZ3pRzDevLpgFO+X3ChduUy+2HiJ5+Tn2BQ==",
+  "dgSpecHash": "K7y5V3nlgTqYaEbxC+ib85xVxQK0VWccE0Sb8AmeQq1MXiGAeLxpTqJHZmDnzYi1ZXXN8A15s3UOOxPsYZ/0rg==",
   "success": true,
   "projectFilePath": "E:\\DotNet\\Projects\\BuberDinner\\BuberDinner.Application\\BuberDinner.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Betar\\.nuget\\packages\\fluentresults\\3.15.1\\fluentresults.3.15.1.nupkg.sha512",
     "C:\\Users\\Betar\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
-    "C:\\Users\\Betar\\.nuget\\packages\\oneof\\3.0.223\\oneof.3.0.223.nupkg.sha512"
+    "C:\\Users\\Betar\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.1\\microsoft.extensions.logging.abstractions.6.0.1.nupkg.sha512",
+    "C:\\Users\\Betar\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],
   "logs": []
 }
