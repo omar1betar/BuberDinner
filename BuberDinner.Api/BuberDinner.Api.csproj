@@ -15,6 +15,7 @@
     <ProjectReference Include="..\BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="ErrorOr" Version="1.2.1" />
     <PackageReference Include="fluentResults" Version="3.15.1" />
   </ItemGroup>
 </Project>

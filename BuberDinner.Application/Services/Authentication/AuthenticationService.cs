@@ -1,7 +1,9 @@
 using BuberDinner.Application.Common.Errors;
 using BuberDinner.Application.Common.Interface.Authentication;
 using BuberDinner.Application.Common.Interface.Presistence;
+using BuberDinner.Domain.Common.Errors;
 using BuberDinner.Domain.Entities;
+using ErrorOr;
 using FluentResults;
 
 namespace BuberDinner.Application.Services.Authentication;
@@ -17,13 +19,13 @@ public class AuthenticationService : IAuthenticationService
         _userRepository = userRepository;
     }
 
-    public AuthenticationResult Login(string email, string password)
+    public ErrorOr<AuthenticationResult> Login(string email, string password)
     {
         if(_userRepository.GetUserByEmail(email) is not User user){
-            throw new Exception("this user is not registered");
+            return Errors.Authentication.InvalidCredentials;
         }
         if(user.Password != password){
-            throw new Exception("user or password is wrong");
+            return Errors.Authentication.InvalidCredentials;
         }
 
         var token = _jwtTokenGenerator.GenerateToken(user);
@@ -31,12 +33,12 @@ public class AuthenticationService : IAuthenticationService
         return new AuthenticationResult(user, token);
     }
 
-    public Result<AuthenticationResult> Regiser(string firstName, string lastName, string email, string password)
+    public ErrorOr<AuthenticationResult> Regiser(string firstName, string lastName, string email, string password)
     {
         // check if user already exist
         if(_userRepository.GetUserByEmail(email) is not null)
         {
-            return Result.Fail<AuthenticationResult> (new [] {new DuplicateEmailError()});
+            return Errors.User.DuplicateEmail;
         }
         //create user with unique id 
         var user = new User

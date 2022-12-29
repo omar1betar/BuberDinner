@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "578BVM1i2T5SBRvljWtD/EaYO6DUIRUosn41XNdFlvFyDlNqFsMsHrpo6HqQvuE0uv26FYa9Z9tl8jn3lXBNHw==",
+  "dgSpecHash": "IEQtbt8vJpJcvFe/OcSwu6fYKO5TrAJizUk7jDJT5h5x5Fmv+9qdSZj7pP4++413VjnrPqD/7x/+IlAYkvCl+w==",
   "success": true,
   "projectFilePath": "E:\\DotNet\\Projects\\BuberDinner\\BuberDinner.Domain\\BuberDinner.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Betar\\.nuget\\packages\\erroror\\1.2.1\\erroror.1.2.1.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "4JV2XMsdfXjN2nMx11ty/pWfO5M8aK1B1rHpjfDUS+vf+qvHllXcgMG4IlYrhozcAsyy7SEO9pIcufFIJsSZNQ==",
+  "dgSpecHash": "Ag7c6Cyu3+BFlUjm1negfIKWO8xGnNFJkoIN9+8WxcfjWzvsFRsKrGczM9XwvFh0U4U7Ru+NOUu8wU3o5bGFdQ==",
   "success": true,
   "projectFilePath": "E:\\DotNet\\Projects\\BuberDinner\\BuberDinner.Api\\BuberDinner.Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Betar\\.nuget\\packages\\erroror\\1.2.1\\erroror.1.2.1.nupkg.sha512",
     "C:\\Users\\Betar\\.nuget\\packages\\fluentresults\\3.15.1\\fluentresults.3.15.1.nupkg.sha512",
     "C:\\Users\\Betar\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Betar\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
