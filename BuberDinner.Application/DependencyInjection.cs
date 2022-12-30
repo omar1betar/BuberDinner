@@ -1,4 +1,5 @@
-using BuberDinner.Application.Services.Authentication;
+using BuberDinner.Application.Services.Authentication.Queries;
+using BuberDinner.Application.Services.Authentication.Commands;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace BuberDinner.Application;
@@ -6,7 +7,8 @@ namespace BuberDinner.Application;
 public static class DependencyInjection
 {
     public static IServiceCollection AddApplication(this IServiceCollection services){
-        services.AddScoped<IAuthenticationService, AuthenticationService>();
+        services.AddScoped<IAuthenticationQueryService, AuthenticationQueryService>();
+        services.AddScoped<IAuthenticationCommandService, AuthenticationCommandService>();
         return services;
     }
 }

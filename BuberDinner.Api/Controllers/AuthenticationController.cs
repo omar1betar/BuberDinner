@@ -1,9 +1,10 @@
-using BuberDinner.Application.Common.Errors;
-using BuberDinner.Application.Services.Authentication;
 using BuberDinner.Contracts.Authentication;
 using ErrorOr;
 using Microsoft.AspNetCore.Mvc;
 using BuberDinner.Api.Controllers;
+using BuberDinner.Application.Services.Authentication.Commands;
+using BuberDinner.Application.Services.Authentication.Queries;
+using BuberDinner.Application.Services.Authentication.Common;
 
 namespace BuberDinner.Api.Controllers;
 
@@ -11,16 +12,19 @@ namespace BuberDinner.Api.Controllers;
 [Route("auth")]
 public class AuthenticationController :ApiController
 {
-private readonly IAuthenticationService _authenticationService;
+private readonly IAuthenticationQueryService _authenticationQueryService;
+private readonly IAuthenticationCommandService _authenticationCommandService;
 
-    public AuthenticationController(IAuthenticationService authenticationService)
+    public AuthenticationController(IAuthenticationQueryService authenticationQueryService,
+     IAuthenticationCommandService authenticationCommandService = null!)
     {
-        _authenticationService = authenticationService;
+        _authenticationQueryService = authenticationQueryService;
+        _authenticationCommandService = authenticationCommandService;
     }
 
     [HttpPost("register")]
     public IActionResult Register(RegisterRequest request){
-        ErrorOr<AuthenticationResult> authResult = _authenticationService.Regiser(
+        ErrorOr<AuthenticationResult> authResult = _authenticationCommandService.Regiser(
             request.FirstName,
             request.LastName,
             request.Email,
@@ -47,7 +51,7 @@ private readonly IAuthenticationService _authenticationService;
     public IActionResult Login(LoginRequest request)
     {
 
-        var authResult = _authenticationService.Login(
+        var authResult = _authenticationQueryService.Login(
            request.Email,
            request.Password);
         return authResult.Match(
